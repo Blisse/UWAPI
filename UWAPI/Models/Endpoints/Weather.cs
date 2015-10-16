@@ -4,14 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.ApplicationModel.Store;
+using UWAPI.Models.Response.Weather;
 
 namespace UWAPI.Models.Endpoints
 {
     public static class Weather
     {
-        public static UwUrlCommand Current()
+        public static UwUrlCommand<CurrentResponse> Current()
         {
-            return new UwUrlCommand("/weather/current");
+            return new UwUrlCommand<CurrentResponse>("/weather/current");
         }
     }
 }

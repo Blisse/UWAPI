@@ -113,31 +113,59 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Constants\UwKeys.cs" />
+    <Compile Include="Models\Endpoints\Codes.cs" />
     <Compile Include="Models\Endpoints\Courses.cs" />
+    <Compile Include="Models\Endpoints\Events.cs" />
     <Compile Include="Models\Endpoints\Extensions.cs" />
     <Compile Include="Models\Endpoints\FoodServices.cs" />
+    <Compile Include="Models\Endpoints\News.cs" />
+    <Compile Include="Models\Endpoints\Services.cs" />
+    <Compile Include="Models\Endpoints\Terms.cs" />
     <Compile Include="Models\Endpoints\UwUrlCommand.cs" />
-    <Compile Include="Models\Endpoints\UwUrlFormat.cs" />
+    <Compile Include="Models\Endpoints\Weather.cs" />
+    <Compile Include="Models\Response\Codes\GroupsResponse.cs" />
+    <Compile Include="Models\Response\Codes\InstructionsResponse.cs" />
+    <Compile Include="Models\Response\Codes\SubjectsResponse.cs" />
+    <Compile Include="Models\Response\Codes\TermsResponse.cs" />
+    <Compile Include="Models\Response\Codes\UnitsResponse.cs" />
+    <Compile Include="Models\Response\Courses\CourseExamScheduleBySubjectAndCatalogNumberResponse.cs" />
+    <Compile Include="Models\Response\Courses\CourseInformationByCourseIdResponse.cs" />
+    <Compile Include="Models\Response\Courses\CourseInformationBySubjectAndCatalogNumberResponse.cs" />
+    <Compile Include="Models\Response\Courses\CoursePrerequisitesBySubjectAndCatalogNumberResponse.cs" />
+    <Compile Include="Models\Response\Courses\CourseScheduleByClassNumberResponse.cs" />
+    <Compile Include="Models\Response\Courses\CourseScheduleBySubjectAndCatalogNumberResponse.cs" />
+    <Compile Include="Models\Response\Courses\SubjectListingsResponse.cs" />
+    <Compile Include="Models\Response\Events\EventFromSiteByIdResponse.cs" />
+    <Compile Include="Models\Response\Events\EventsFromAllSitesResponse.cs" />
+    <Compile Include="Models\Response\Events\EventsFromSiteResponse.cs" />
+    <Compile Include="Models\Response\Events\HolidaysResponse.cs" />
+    <Compile Include="Models\Response\FoodServices\AnnouncementsResponse.cs" />
+    <Compile Include="Models\Response\FoodServices\DietsResponse.cs" />
+    <Compile Include="Models\Response\FoodServices\LocationsResponse.cs" />
+    <Compile Include="Models\Response\FoodServices\MenuResponse.cs" />
+    <Compile Include="Models\Response\FoodServices\NotesResponse.cs" />
+    <Compile Include="Models\Response\FoodServices\OutletsResponse.cs" />
+    <Compile Include="Models\Response\FoodServices\ProductDetailsResponse.cs" />
+    <Compile Include="Models\Response\FoodServices\WatCardResponse.cs" />
+    <Compile Include="Models\Response\FoodServices\WeeklyFoodAnnouncementsResponse.cs" />
+    <Compile Include="Models\Response\FoodServices\WeeklyFoodMenuResponse.cs" />
+    <Compile Include="Models\Response\FoodServices\WeeklyFoodNotesResponse.cs" />
+    <Compile Include="Models\Response\News\NewsFromAllSitesResponse.cs" />
+    <Compile Include="Models\Response\News\NewsFromSiteByIdResponse.cs" />
+    <Compile Include="Models\Response\News\NewsFromSiteResponse.cs" />
+    <Compile Include="Models\Response\UwUrlResponse.cs" />
+    <Compile Include="Models\Response\Services\ServicesForSiteResponse.cs" />
+    <Compile Include="Models\Response\Terms\CourseScheduleByTermResponse.cs" />
+    <Compile Include="Models\Response\Terms\ExamScheduleTermResponse.cs" />
+    <Compile Include="Models\Response\Terms\InfoSessionsByTermResponse.cs" />
+    <Compile Include="Models\Response\Terms\ListingResponse.cs" />
+    <Compile Include="Models\Response\Terms\SubjectScheduleByTermResponse.cs" />
+    <Compile Include="Models\Response\Weather\CurrentResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\UwService.cs" />
     <Content Include="Properties\UWAPI.rd.xml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\Response\Api\" />
-    <Folder Include="Models\Response\Buildings\" />
-    <Folder Include="Models\Response\Courses\" />
-    <Folder Include="Models\Response\DefinitionsAndCodes\" />
-    <Folder Include="Models\Response\Events\" />
-    <Folder Include="Models\Response\FoodServices\" />
-    <Folder Include="Models\Response\News\" />
-    <Folder Include="Models\Response\Parking\" />
-    <Folder Include="Models\Response\Resources\" />
-    <Folder Include="Models\Response\Server\" />
-    <Folder Include="Models\Response\Services\" />
-    <Folder Include="Models\Response\Term\" />
-    <Folder Include="Models\Response\Weather\" />
-    <Folder Include="Services\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

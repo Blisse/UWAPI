@@ -3,28 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UWAPI.Models.Response.Events;
 
 namespace UWAPI.Models.Endpoints
 {
     public static class Events
     {
-        public static UwUrlCommand EventsFromAllSites()
+        public static UwUrlCommand<EventsFromAllSitesResponse> EventsFromAllSites()
         {
-            return new UwUrlCommand("/events");
+            return new UwUrlCommand<EventsFromAllSitesResponse>("/events");
         }
 
-        public static UwUrlCommand EventsFromSite(string site)
+        public static UwUrlCommand<EventsFromSiteResponse> EventsFromSite(string site)
         {
-            return new UwUrlCommand("/events/{site}",
+            return new UwUrlCommand<EventsFromSiteResponse>("/events/{site}",
                 new Dictionary<string, string>()
                 {
                     {"site", site}
                 });
         }
 
-        public static UwUrlCommand EventFromSiteById(string site, string id)
+        public static UwUrlCommand<EventFromSiteByIdResponse> EventFromSiteById(string site, string id)
         {
-            return new UwUrlCommand("/events/{site}/{id}",
+            return new UwUrlCommand<EventFromSiteByIdResponse>("/events/{site}/{id}",
                 new Dictionary<string, string>()
                 {
                     {"site", site},
@@ -32,9 +33,9 @@ namespace UWAPI.Models.Endpoints
                 });
         }
 
-        public static UwUrlCommand Holidays()
+        public static UwUrlCommand<HolidaysResponse> Holidays()
         {
-            return new UwUrlCommand("/events/holidays");
+            return new UwUrlCommand<HolidaysResponse>("/events/holidays");
         }
     }
 }

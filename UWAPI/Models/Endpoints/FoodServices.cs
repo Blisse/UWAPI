@@ -3,57 +3,58 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UWAPI.Models.Response.FoodServices;
 
 namespace UWAPI.Models.Endpoints
 {
     public static class FoodServices
     {
-        public static UwUrlCommand Announcements()
+        public static UwUrlCommand<AnnouncementsResponse> Announcements()
         {
-            return new UwUrlCommand("/foodservices/announcements");
+            return new UwUrlCommand<AnnouncementsResponse>("/foodservices/announcements");
         }
 
-        public static UwUrlCommand Diets()
+        public static UwUrlCommand<DietsResponse> Diets()
         {
-            return new UwUrlCommand("/foodservices/diets");
+            return new UwUrlCommand<DietsResponse>("/foodservices/diets");
         }
 
-        public static UwUrlCommand Locations()
+        public static UwUrlCommand<LocationsResponse> Locations()
         {
-            return new UwUrlCommand("/foodservices/locations");
+            return new UwUrlCommand<LocationsResponse>("/foodservices/locations");
         }
 
-        public static UwUrlCommand Menu()
+        public static UwUrlCommand<MenuResponse> Menu()
         {
-            return new UwUrlCommand("/foodservices/menu");
+            return new UwUrlCommand<MenuResponse>("/foodservices/menu");
         }
 
-        public static UwUrlCommand Notes()
+        public static UwUrlCommand<NotesResponse> Notes()
         {
-            return new UwUrlCommand("/foodservices/notes");
+            return new UwUrlCommand<NotesResponse>("/foodservices/notes");
         }
 
-        public static UwUrlCommand Outlets()
+        public static UwUrlCommand<OutletsResponse> Outlets()
         {
-            return new UwUrlCommand("/foodservices/outlets");
+            return new UwUrlCommand<OutletsResponse>("/foodservices/outlets");
         }
 
-        public static UwUrlCommand WatCard()
+        public static UwUrlCommand<WatCardResponse> WatCard()
         {
-            return new UwUrlCommand("/foodservices/watcard");
+            return new UwUrlCommand<WatCardResponse>("/foodservices/watcard");
         }
 
-        public static UwUrlCommand ProductDetails(string productId)
+        public static UwUrlCommand<ProductDetailsResponse> ProductDetails(string productId)
         {
-            return new UwUrlCommand("/foodservices/products/{product_id}",
+            return new UwUrlCommand<ProductDetailsResponse>("/foodservices/products/{product_id}",
                 new Dictionary<string, string>()
                 {
                     {"product_id", productId}
                 });
         }
-        public static UwUrlCommand WeeklyFoodMenu(string year, string week)
+        public static UwUrlCommand<WeeklyFoodMenuResponse> WeeklyFoodMenu(string year, string week)
         {
-            return new UwUrlCommand("/foodservices/{year}/{week}/menu",
+            return new UwUrlCommand<WeeklyFoodMenuResponse>("/foodservices/{year}/{week}/menu",
                 new Dictionary<string, string>()
                 {
                     {"year", year},
@@ -61,9 +62,9 @@ namespace UWAPI.Models.Endpoints
                 });
         }
         
-        public static UwUrlCommand WeeklyFoodNotes(string year, string week)
+        public static UwUrlCommand<WeeklyFoodNotesResponse> WeeklyFoodNotes(string year, string week)
         {
-            return new UwUrlCommand("/foodservices/{year}/{week}/notes",
+            return new UwUrlCommand<WeeklyFoodNotesResponse>("/foodservices/{year}/{week}/notes",
                 new Dictionary<string, string>()
                 {
                     {"year", year},
@@ -71,9 +72,9 @@ namespace UWAPI.Models.Endpoints
                 });
         }
 
-        public static UwUrlCommand WeeklyFoodAnnouncements(string year, string week)
+        public static UwUrlCommand<WeeklyFoodAnnouncementsResponse> WeeklyFoodAnnouncements(string year, string week)
         {
-            return new UwUrlCommand("/foodservices/{year}/{week}/announcements",
+            return new UwUrlCommand<WeeklyFoodAnnouncementsResponse>("/foodservices/{year}/{week}/announcements",
                 new Dictionary<string, string>()
                 {
                     {"year", year},

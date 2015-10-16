@@ -28,11 +28,11 @@ namespace UWAPI.Models.Endpoints
             StringBuilder sb;
             if (url.Contains("?"))
             {
-                sb = new StringBuilder(url + "&");
+                sb = new StringBuilder("&");
             }
             else
             {
-                sb = new StringBuilder(url + "?");
+                sb = new StringBuilder("?");
             }
 
             bool first = true;

@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UWAPI.Models.Response.Services;
 
 namespace UWAPI.Models.Endpoints
 {
     public static class Services
     {
-        public static UwUrlCommand ServicesForSite(string site)
+        public static UwUrlCommand<ServicesForSiteResponse> ServicesForSite(string site)
         {
-            return new UwUrlCommand("/services/{site}", new Dictionary<string, string>()
+            return new UwUrlCommand<ServicesForSiteResponse>("/services/{site}", new Dictionary<string, string>()
             {
                 {"site", site}
             });
