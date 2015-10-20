@@ -160,7 +160,7 @@
     <Compile Include="Models\Response\Terms\InfoSessionsByTermResponse.cs" />
     <Compile Include="Models\Response\Terms\ListingResponse.cs" />
     <Compile Include="Models\Response\Terms\SubjectScheduleByTermResponse.cs" />
-    <Compile Include="Models\Response\Weather\CurrentResponse.cs" />
+    <Compile Include="Models\Response\Weather\CurrentWeatherResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\UwService.cs" />
     <Content Include="Properties\UWAPI.rd.xml" />

@@ -47,9 +47,7 @@ namespace UWAPI.Services
         private Uri CreateLegalUri<TResponse>(UwUrlCommand<TResponse> command) where TResponse : UwUrlResponse
         {
             string url = command + ".json";
-
             url = url.AppendQueryString(_apiKeyQueryKey);
-
             return new Uri(url, UriKind.Absolute);
         }
     }

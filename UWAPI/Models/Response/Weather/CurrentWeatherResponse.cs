@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 
 namespace UWAPI.Models.Response.Weather
 {
-    public class CurrentResponse : UwUrlResponse
+    public class CurrentWeatherResponse : UwUrlResponse
     {
         public class Datum
         {

@@ -10,9 +10,9 @@ namespace UWAPI.Models.Endpoints
 {
     public static class Weather
     {
-        public static UwUrlCommand<CurrentResponse> Current()
+        public static UwUrlCommand<CurrentWeatherResponse> CurrentWeather()
         {
-            return new UwUrlCommand<CurrentResponse>("/weather/current");
+            return new UwUrlCommand<CurrentWeatherResponse>("/weather/current");
         }
     }
 }
